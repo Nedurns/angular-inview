@@ -117,6 +117,7 @@
         trackInViewContainer(controller);
         return scope.$on('$destroy', function() {
           element.unbind('scroll', controller.checkInView);
+          element.unbind('keyup', controller.checkInView);
           return untrackInViewContainer(controller);
         });
       }
