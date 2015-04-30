@@ -113,6 +113,7 @@
       ],
       link: function(scope, element, attrs, controller) {
         element.bind('scroll', controller.checkInView);
+        element.bind('keyup', controller.checkInView);
         trackInViewContainer(controller);
         return scope.$on('$destroy', function() {
           element.unbind('scroll', controller.checkInView);
